@@ -1,0 +1,53 @@
+-------------------------------------Project Management Application Actions Guide----------------------------------------------------------------------------------------
+
+
+
+All actions are performed through the Post command in the Command Controller and are performed on entities in the object_table  of 4 different types, each type represent a mini application:
+
+	Admin App- project 
+	Chat App - chat
+        Calendar App - calendar
+        Kanban App - Kanban)
+
+Each type has different attributes that are extracted by the server  from the commandAttributes field in the MiniAppCommandBoundary (All attributes are specified in the ERD)  -
+	 
+
+
+ACTIONS:
+
+
+1.Provide one of the following miniAppName: Admin App, Chat App, Calendar App, Kanban App 
+   
+2.Provide one of the following commands  in the command field in the MiniAppCommandBoundary requested in the body:
+	"addminiappobject" -Adding a miniapp object 
+         "updateminiappobject" - Updating a mini app object
+         "getallminiappobjects" - Getting all mini app objects
+         (To deactivate an object just use the update command and provide "active" : false in the commandAttributes)
+
+3. Fill the necessary information in the Jason of the requested body in Swagger UI (See Jason Configurations for Miniapp Objects PDF file for more information) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Performing what f the Actions implemented in our Miniapps : Admin App, Chat App, Calendar 
